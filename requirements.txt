@@ -3,6 +3,7 @@ PasteDeploy==2.1.0
 plaster==1.0
 plaster-pastedeploy==0.7
 pyramid==1.10.4
+redis==3.5.3
 translationstring==1.4
 venusian==3.0.0
 waitress==1.4.4

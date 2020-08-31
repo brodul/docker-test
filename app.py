@@ -1,11 +1,16 @@
+import os
+
 from waitress import serve
 from pyramid.config import Configurator
 from pyramid.response import Response
+import redis
 
+r = redis.Redis(host=os.getenv("REDIS_HOSTNAME"))
+r.set("mykey", "0")
 
 def hello_world(request):
     print('Incoming request')
-    return Response('<body><h1>Hello World!</h1></body>')
+    return Response('<body><h1>Hello World! %s</h1></body>' % r.incr("mykey"))
 
 
 if __name__ == '__main__':

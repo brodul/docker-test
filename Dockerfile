@@ -3,6 +3,7 @@ FROM python:3.8-slim-buster
 # USER app
 
 ARG VENV=env
+ENV REDIS_HOSTNAME=redis
 WORKDIR /usr/src/app
 
 
