@@ -7,6 +7,6 @@ redis==3.5.3
 translationstring==1.4
 venusian==3.0.0
 waitress==1.4.4
-WebOb==1.8.6
+WebOb==1.8.8
 zope.deprecation==4.4.0
 zope.interface==5.1.0
